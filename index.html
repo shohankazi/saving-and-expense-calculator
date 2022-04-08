@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Expenses and savings calculator</title>
+<link rel="shortcut icon" href="images/logo.png" type="image/x-icon" />
+<!-- bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"
+/>
+<!-- font awesome -->
+<script
+    src="https://kit.fontawesome.com/cd557ce07f.js"
+    crossorigin="anonymous"
+></script>
+</head>
+<body>
+<h1 style="background-color: rgb(96 82 96 / 79%);" class="text-center mt-5 container text-white p-3 rounded-3">
+    Cost and savings
+    <i class="fa-solid fa-sack-dollar"></i>
+</h1>
+
+<!-- calculate -->
+<div class="container mt-5 opacity">
+    <div class="row">
+    <!-- image -->
+    <div class="col-sm-12 col-md-12 col-lg-8 mb-5">
+        <div class="card">
+        <div class="card-body">
+            <img
+            src="images/expense.jpg"
+            class="img-fluid rounded-3 img-banner"
+            alt=""
+            />
+        </div>
+        </div>
+    </div>
+    <!-- calculate -->
+    <div class="col-sm-12 col-md-12 col-lg-4 mb-3">
+        <div class="card">
+        <div class="card-body">
+            <div class="container">
+            <!-- income -->
+            <section>
+                <h3 class="text-center">Income</h3>
+                <div class="input-group">
+                <span
+                    style="width: 100px"
+                    class="input-group-text"
+                    id="inputGroup-sizing-default"
+                >
+                    <i class="fa fa-dollar me-1" aria-hidden="true"></i>
+                    Income</span
+                >
+                <input
+                    id="total-income"
+                    type="number"
+                    class="form-control"
+                    aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-lg"
+                />
+                </div>
+            </section>
+            <!-- expenses -->
+            <section>
+                <h3 class="text-center my-4 ">Expenses</h3>
+                <!-- food -->
+                <div class="input-group mb-3">
+                <span
+                    style="width: 100px"
+                    class="input-group-text"
+                    id="inputGroup-sizing-default"
+                >
+                    <i class="fa-solid fa-bowl-food me-2"></i>Food</span
+                >
+                <input
+                    type="number"
+                    id="food-cost"
+                    class="form-control"
+                    aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-default"
+                />
+                </div>
+                <!-- rent -->
+                <div class="input-group mb-3">
+                <span
+                    style="width: 100px"
+                    class="input-group-text"
+                    id="inputGroup-sizing-default"
+                >
+                    <i class="fa-solid fa-house me-2"></i>Rent</span
+                >
+                <input
+                    type="number"
+                    id="rent-cost"
+                    class="form-control"
+                    aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-default"
+                />
+                </div>
+                <!-- clothes -->
+                <div class="input-group mb-3">
+                <span style="width: 120px" class="input-group-text"><i class="fa-solid fa-shirt me-2"></i>Clothes</span>
+                <input
+                    type="number"
+                    id="clothes-cost"
+                    class="form-control"
+                    aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-default"
+                />
+                </div>
+                <!-- calculate button -->
+                <button
+                id="calculate-btn"
+                type="button"
+                class="btn btn-success"
+                >
+                <i class="fa fa-calculator" aria-hidden="true"></i>
+                Calculate
+                </button>
+                <!-- calculate -->
+                <div class="mt-3">
+                <h5>
+                    Total Cost: $<span id="total-expenses">0.00</span>
+                </h5>
+                <h5>Balance: $<span id="total-balance">0.00</span></h5>
+                </div>
+            </section>
+            <!-- save -->
+            <section>
+                <div class="input-group mt-3 mb-3 d-flex">
+                <span style="width: 100px" class="input-group-text" id="inputGroup-sizing-default">
+                    <i class="fa-solid fa-piggy-bank me-2"></i>Save</span>
+                <input type="number" id="savings-percent" class="form-control rounded-end" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"/>
+                <span class="ms-3 align-items-center fs-4 d-inline">%
+                </span>
+                <button id="save-btn" class="btn btn-success rounded-3 mt-3"
+                >
+                <i class="fa-solid fa-hand-holding-dollar me-2"></i>Save
+                </button>
+                </div>
+            </section>
+            <!-- savings and remaining -->
+            <section class="mt-2">
+                <h5>Saving Amount: $<span id="saved">0.00</span></h5>
+                <h5>Remaining Balance: $<span id="remain">0.00</span></h5>
+            </section>
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+</div>
+<!-- javascript area -->
+<script src="./js/app.js"></script>
+</body>
+</html>
